@@ -12,6 +12,20 @@ ServiceTinySLAM::~ServiceTinySLAM()
   //
 }
 
+void ServiceTinySLAM::run()
+{
+    std::cout << "slam run" << std::endl;
+}
+void ServiceTinySLAM::stop()
+{
+    std::cout << "slam stop" << std::endl;
+}
+
+void ServiceTinySLAM::reset()
+{
+    std::cout << "slam reset" << std::endl;
+}
+
 /*!
  * Determines the cell factory based on parameters came from a launch file.
  * \param[in] params - values from the launch file.

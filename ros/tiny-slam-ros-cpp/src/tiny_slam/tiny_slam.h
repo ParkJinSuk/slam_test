@@ -24,6 +24,10 @@ public:
     ServiceTinySLAM(ros::NodeHandle nh);
     ~ServiceTinySLAM();
 
+    void run();
+    void stop();
+    void reset();
+
 private: // init function
     std::shared_ptr<GridCellFactory> init_cell_factory(TinyWorldParams &params);
     std::shared_ptr<CellOccupancyEstimator> init_occ_estimator();
