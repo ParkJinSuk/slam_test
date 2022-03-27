@@ -21,7 +21,7 @@
 class ServiceTinySLAM
 {
 public:
-    ServiceTinySLAM(int argc, char** argv);
+    ServiceTinySLAM(ros::NodeHandle nh);
     ~ServiceTinySLAM();
 
 private: // init function
@@ -36,5 +36,6 @@ private: // init function
                                 int &ros_subscr_queue);
     void init_frame_names(std::string &frame_odom, std::string &frame_robot_pose);
 
-    void init_tiny_slam(int argc, char** argv);  // tiny_slam.cpp main에 있는 소스
+    void init_tiny_slam();  // tiny_slam.cpp main에 있는 소스
+    ros::NodeHandle nh_;
 };
